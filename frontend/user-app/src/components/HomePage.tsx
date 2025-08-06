@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createUser, getUser, CreateUserRequest, User } from '../services/userService';
+import { ReactComponent as CustomLogo } from '../logo-custom.svg';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {
@@ -74,7 +75,10 @@ const HomePage: React.FC = () => {
   return (
     <div className="homepage">
       <div className="container">
-        <h1>User Management App</h1>
+        <div className="logo-header">
+          <CustomLogo className="logo" />
+          <h1>User Management App</h1>
+        </div>
         
         <div className="button-container">
           <button
